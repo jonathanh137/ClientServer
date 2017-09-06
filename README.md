@@ -12,25 +12,39 @@ Download server.c and client.c
 
 Navigate to where you stored the files
 
-#### For server.c: 
+1. Compile server.c
+```
 gcc -lpthread -lrt -o server server.c
+```
+2. Run server.c
+```
 ./server
+```
 
-#### For client.c:
+3. Compile client.c
+```
 gcc -o client client.c
-./client <server computer name>   //eg: ./client linux60808
+```
+4. Run client.c
+```
+./client <server computer name>   
+eg: ./client linux60808
+```
 
 ### Running commands
 
 These are the available commands:
 
 #### pingSites <argv[0]>, <argv[1]>, ... 
-  Pings the given websites and displays their minimum, maximum, and average response times and the user's handle number. Each <argv[]> can be filled with a website     URL. Number of websites able to be pinged at once is limited by the character array size(1024). Website examples: www.google.com,       www.bing.com, www.cnn.com, etc. 
+  Pings the given websites and displays their minimum, maximum, and average response times and the user's handle number. Each <argv[]> can be filled with a website     URL. Number of websites able to be pinged at once is limited by the character array size(1024).
+  ```
+  pingSites www.google.com, www.bing.com, www.cnn.com
+  ```
   
 #### showHandles 
   Shows all the handle numbers the server currently has received. 
 
-#### showHandleStatus <handle>
+#### showHandleStatus \<handle>
   Shows a specify handle's request and whether the request is in queue, in progress, or complete. 
 
 #### showHandleStatus 
